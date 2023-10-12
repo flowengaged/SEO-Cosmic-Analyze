@@ -19,27 +19,6 @@ import plotly.graph_objects as go
 import plotly.express as px
 import plotly.io as pio
 
-page_bg_img = """
-<style>
-[data-testid="stAppViewContainer"] {
-    background-color: #000000;
-    opacity: 0.5;
-}
-</style>
-"""
-
-st.markdown(page_bg_img, unsafe_allow_html=True)
-# st.header("Medium")
-  
-hide_st_style = """
-            <style>
-            #MainMenu {visibility: hidden;}
-            footer {visibility: hidden;}
-            header {visibility: hidden;}
-            </style>
-            """
-st.markdown(hide_st_style, unsafe_allow_html=True)
-
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 nltk.download('stopwords')
@@ -245,7 +224,7 @@ def generate_speedometer_chart(value, min_value, max_value, title):
     return fig
     
 def main():
-    st.title("SEO Cosmic Analyze")
+    st.title("SEO Blog Post Optimizer")
     option = st.radio("Select an option", ("Enter blog post content", "Paste web page link"), key="option_selection")
 
     word_count = 0
@@ -349,10 +328,11 @@ def main():
         st.markdown(serp_preview, unsafe_allow_html=True)
 
     st.write("---")
-    st.write("Thank you for using SEO Cosmic Analyze!")
+    st.write("Thank you for using SEO Blog Post Optimizer!")
 
 
 
 
 if __name__ == '__main__':
     main()
+
