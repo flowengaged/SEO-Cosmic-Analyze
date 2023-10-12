@@ -19,6 +19,28 @@ import plotly.graph_objects as go
 import plotly.express as px
 import plotly.io as pio
 
+page_bg_img = """
+<style>
+[data-testid="stAppViewContainer"] {
+    background-color: #000000;
+    opacity: 0.8;
+}
+</style>
+"""
+
+st.markdown(page_bg_img, unsafe_allow_html=True)
+# st.header("Medium")
+  
+hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_st_style, unsafe_allow_html=True)
+
+
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 nltk.download('stopwords')
